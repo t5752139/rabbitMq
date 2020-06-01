@@ -17,7 +17,7 @@ public class ConnertionUtils {
        factory.setHost("127.0.0.1");
        //端口
        //amqp 5672
-       factory.setPort(5671);
+       factory.setPort(5672);
        //virtual
        factory.setVirtualHost("/virtual_user");
        //账号
