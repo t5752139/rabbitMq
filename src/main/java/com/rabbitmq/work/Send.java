@@ -13,6 +13,8 @@ import java.util.concurrent.TimeoutException;
  * p  - -- queue                消费者接受消息是每一个一条,跟处理时间没关系,用的是轮询方式
  *                 k2
  */
+
+
 public class Send {
     private static  final  String QUEUE = "tets_work";
     public static void main(String[] args) throws IOException, TimeoutException {
