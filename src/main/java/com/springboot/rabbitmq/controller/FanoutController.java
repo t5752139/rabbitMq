@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class FanoutControiller {
+public class FanoutController {
 
     @Autowired
     private FanoutProducer fanoutProducer;
@@ -17,6 +17,5 @@ public class FanoutControiller {
         fanoutProducer.send(queueName);
         return "ok";
     }
-
 
 }

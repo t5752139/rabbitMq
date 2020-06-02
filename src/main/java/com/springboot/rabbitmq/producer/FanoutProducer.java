@@ -11,8 +11,6 @@ import java.util.Date;
  */
 @Component
 public class FanoutProducer {
-
-
     @Autowired
     private AmqpTemplate amqpTemplate;
 
@@ -27,5 +25,4 @@ public class FanoutProducer {
             //发送消息
             amqpTemplate.convertAndSend(queueName,mas);
         }
-
 }

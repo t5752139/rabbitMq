@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
-//放入队列
+//指定队列
 @RabbitListener(queues = "work_sms")
 public class SmsConsumer {
 

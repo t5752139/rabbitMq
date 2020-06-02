@@ -1,7 +1,7 @@
 spring:
   rabbitmq:
     # 连接地址
-    host: localhost
+    host: 127.0.0.1
     #端口号
     port: 5672
     #账号
