@@ -11,7 +11,7 @@ import java.util.concurrent.TimeoutException;
  * 消费者 获取消息
  */
 public class Recv {
-    private static  final java.lang.String QUEUE = "tets_name";
+    private static  final String QUEUE = "tets_name";
     public static void main(String[] args) throws IOException, TimeoutException, InterruptedException {
         /**
          * 新api
@@ -29,7 +29,7 @@ public class Recv {
           */
         DefaultConsumer defaultConsumer = new DefaultConsumer(channel) {
             @Override
-            public void handleDelivery(java.lang.String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
+            public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
                 String s = new String(body, "utf-8");
                 System.out.println("接受消息: "+ s);
             }

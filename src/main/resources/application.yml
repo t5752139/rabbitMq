@@ -1,0 +1,12 @@
+spring:
+  rabbitmq:
+    # 连接地址
+    host: localhost
+    #端口号
+    port: 5672
+    #账号
+    username: user_admin
+    #密码
+    password: 123
+    #地址   可以理解为mysql的数据库名字
+    virtual-host: /virtual_user

@@ -40,12 +40,15 @@ public class Send1 {
         final SortedSet<Long> confimset = Collections.synchronizedSortedSet(new TreeSet<Long>());
         //监听
         channel.addConfirmListener(new ConfirmListener() {
-
+            //回执有问题的
+            //可以自定义1秒
             public void handleNack(long deliveryTag, boolean multiple) throws IOException {
             if(multiple){
+
                 System.out.println(11);
                 confimset.headSet(deliveryTag+1).clear();
             }else {
+
                 System.out.println(222);
                 confimset.remove(deliveryTag);
             }
@@ -62,9 +65,11 @@ public class Send1 {
              */
             public void handleAck(long deliveryTag, boolean multiple) throws IOException {
                 if (multiple) {
+                    //回复多条的
                     System.out.println(333);
                     confimset.headSet(deliveryTag + 1).clear();
                 }else {
+                    //回复一条的
                     System.out.println(4444);
                     confimset.remove(deliveryTag);
                 }

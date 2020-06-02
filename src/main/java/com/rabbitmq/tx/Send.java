@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 /**
- * 生产消息
+ * 生产消息 定一个
  */
 public class Send {
 
