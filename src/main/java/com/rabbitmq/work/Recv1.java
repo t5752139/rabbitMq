@@ -33,6 +33,11 @@ public class Recv1 {
             }
         };
         //监听队列
+        /**
+         * 参数1 消息那个队列的队列名称 队列名称
+         * 参数2 开始消息自动确认机制
+         * 参数3 消费时回调接口
+         */
         channel.basicConsume(QUEUE,true,defaultConsumer);
 
 
